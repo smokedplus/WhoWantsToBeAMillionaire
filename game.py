@@ -15,7 +15,7 @@ set_of_questions = []
 
 def play():
     while True:
-        start = input("Who wants to be a millionaire? Print Me! to start.")
+        start = input("Who wants to be a millionaire? Print Me! or Not Me.\n")
         if start == "Me!":
             question_number = 0
             for question in set_of_questions:
@@ -57,8 +57,8 @@ def play():
                 else:
                     print("Game Over.")
                     continue
-    else:
-        start_screen()
+        else:
+            start_screen()
 
 
 def create_questions():
@@ -79,14 +79,12 @@ def create_questions():
             set_of_questions.append(temp_question)
             continue
         elif user_choice2 == "Back":
-            play()
+            start_screen()
 
 def start_screen():
     user_choice = input("Do you want to play the game or create a set of questions? Input Play or Create.\n")
     if user_choice == "Play":
-        questions_number = input("How many questions would you like?")
-        for i in range(0, questions_number):
-            continue
+        play()
     elif user_choice == "Create":
         create_questions()
 

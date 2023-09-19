@@ -44,7 +44,7 @@ def play():
                     elif question_number == 9:
                         money = "$30000"
                     elif question_number == 10:
-                        money = "$5000"
+                        money = "$50000"
                     elif question_number == 11:
                         money = "$100000"
                     elif question_number == 12:
@@ -53,8 +53,11 @@ def play():
                         money = "$500000"
                     elif question_number == 14:
                         money = "$1000000"
+                        print("You have $1000000.")
+                        print("You have won a million dollars!")
+                        break
                     print("You have " + money + ".\n")
-                else:
+                elif user_answer != question.correct_answer:
                     print("Game Over.")
                     continue
         else:
